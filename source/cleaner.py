@@ -10,10 +10,10 @@ from nltk import wordnet
 from nltk import ngrams
 from nltk.corpus import stopwords
 
-def cleanData(df, column_in='text', column_out='text'):
+def cleanData(df, typeMorpho='stemmer', column_in='text', column_out='text'):
 
 	token_punct = tokenize.WordPunctTokenizer()
-	stemer = porter.PorterStemmer()
+	stemmer = porter.PorterStemmer()
 	lemma  = wordnet.WordNetLemmatizer()
 
 	#Conjunto de stopwords em inglês
@@ -45,11 +45,12 @@ def cleanData(df, column_in='text', column_out='text'):
 		for word in words_list:
 			if word not in removal_words:
 
-				#Aplica o Stemmer na palavra
-				comment_clean.append(stemer.stem(word))
-
-				#Aplica a lemmatização na palavra
-				#comment_clean.append(lemma.lemmatize(word))
+				if typeMorpho == 'stemmer':
+					#Aplica o Stemmer na palavra
+					comment_clean.append(stemmer.stem(word))
+				else:
+					#Aplica a lemmatização na palavra
+					comment_clean.append(lemma.lemmatize(word))
 
 		#Adiciona a frase higienizada na lista
 		comments_processed.append(' '.join(comment_clean))
