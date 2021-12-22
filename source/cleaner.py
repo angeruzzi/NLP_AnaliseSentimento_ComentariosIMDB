@@ -1,7 +1,7 @@
 import re
 import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
 
 from string import punctuation
 from nltk import tokenize
@@ -10,7 +10,7 @@ from nltk import wordnet
 from nltk import ngrams
 from nltk.corpus import stopwords
 
-def cleanData(df, name_column='text'):
+def cleanData(df, column_in='text', column_out='text'):
 
 	token_punct = tokenize.WordPunctTokenizer()
 	stemer = porter.PorterStemmer()
@@ -28,7 +28,7 @@ def cleanData(df, name_column='text'):
 	removal_words = stopwords_list + punctuation_list
 
 	comments_processed = list()
-	for comment in df[name_column]:
+	for comment in df[column_in]:
 
 		comment_clean = list()
 		
@@ -55,6 +55,6 @@ def cleanData(df, name_column='text'):
 		comments_processed.append(' '.join(comment_clean))
 
 	#Substitui os textos originais pelos tratados
-	df[name_column] = comments_processed
+	df[column_out] = comments_processed
 
 	return df

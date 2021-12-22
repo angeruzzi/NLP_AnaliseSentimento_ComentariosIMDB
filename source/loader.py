@@ -1,61 +1,61 @@
-
 import pandas as pd 
 from os import walk
 
-def loadTrain():
-	#Faz o load dos corpus disponíveis para treino e teste
-	PATH_TRAIN = '../corpus/'
+def loadTrain(path_files):
 
-	#Recupera dados disponíveis para Treino, 
+	#Recupera dados disponíveis para Treino 
 	#target: Informa -1 para as opiniões negativas e 1 para as positivas
 	#takeScore: True Solicita que seja recuperado o score do comentário
-	dfTrainNeg = loadFiles(PATH_TRAIN+'/train/neg', target=-1, takeScore=True)
-	dfTrainPos = loadFiles(PATH_TRAIN+'/train/pos', target= 1, takeScore=True)	
+	dfTrainNeg = loadFiles(path_files+'/train/neg', target=-1, takeScore=True)
+	dfTrainPos = loadFiles(path_files+'/train/pos', target= 1, takeScore=True)	
 
 	#Concatena as linhas dos 2 dataframes em apenas um
 	dfTrain = pd.concat([dfTrainNeg, dfTrainPos], axis=0)
 
+	#Retorna o Dataframe de Treino
+	return dfTrain
+
+def loadTest(path_files):
+	#Faz o load dos corpus disponíveis para teste
 
 	#Recupera dados disponíveis para Teste
 	#target: Informa -1 para as opiniões negativas e 1 para as positivas
 	#takeScore: False - Não solicita o score do comentário
-	dfTestNeg = loadFiles(PATH_TRAIN+'/test/neg', target=-1, takeScore=False)
-	dfTestPos = loadFiles(PATH_TRAIN+'/test/pos', target= 1, takeScore=False)
+	dfTestNeg = loadFiles(path_files+'/test/neg', target=-1, takeScore=False)
+	dfTestPos = loadFiles(path_files+'/test/pos', target= 1, takeScore=False)
 
 	#Concatena as linhas dos 2 dataframes em apenas um
 	dfTest = pd.concat([dfTestNeg, dfTestPos], axis=0)
 
-	#Retorna os 2 dataframes finais: Treino e Teste
-	return dfTrain, dfTest
+	#Retorna o Dataframe de Teste
+	return dfTest
 
-
-def loadPredict():
+def loadPredict(path_files):
 	#Faz o load dos corpus disponíveis para treino e teste
-	PATH_PREDICT = '../topredict/'
 
 	#Recupera dados que serão utilizados para Predição
 	#Target: 0 , Sem Predição prévia
 	#takeScore: False - Não solicita o score do comentário
-	dfPredict = loadFiles(PATH_PREDICT, target=0, takeScore=False)
+	dfPredict = loadFiles(path_files, target=0, takeScore=False)
 
 	#Retorna o dataFrame gerado
 	return dfPredict
 
 
-def loadFiles(path, target=0, takeScore=False):
+def loadFiles(path_files, target=0, takeScore=False):
 
 	files = []
 	list_content = []
 
 	#Percorre o diretório informado e gera uma lista dos arquivos
-	for (dirpath, dirnames, filenames) in walk(path):
+	for (dirpath, dirnames, filenames) in walk(path_files):
 	    files.extend(filenames)
 	    break
 
 	#Percorre a lista dos arquivos
 	for arquivo in files:
 	    name_file = arquivo
-	    path_file = path + '/' + name_file
+	    path_file = path_files + '/' + name_file
 
 	    #Abre o arquivo em mode de leitura
 	    with open(path_file, 'r', encoding='utf-8') as txt_file:

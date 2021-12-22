@@ -21,10 +21,10 @@ def loadSaveModel():
 
 	if not fObjModel.is_file():
 		print("O modelo ainda não foi gerado")
-		return False
+		return None
 
-	with open(fNameModel, 'rb') as fid: 
-		modelo = pickle.load(fid)
+	with open(fNameModel, 'rb') as file: 
+		modelo = pickle.load(file)
 
 	return modelo
 
@@ -45,9 +45,10 @@ def testModel(modelo_treinado, X, y):
 	return df
 
 
-def predict(matriz):
+def predictSaveModel(matriz):
 
 	modelo = loadSaveModel()
-	pred = modelo.predict(matriz)
-
-	return pred
+	if modelo:
+		pred = modelo.predict(matriz)
+		return pred
+	return None
