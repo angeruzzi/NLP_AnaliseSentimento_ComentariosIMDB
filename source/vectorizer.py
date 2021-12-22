@@ -22,10 +22,10 @@ def vectTrain(dfTrain, typeCont='count', name_column='text'):
 
 	#Salva o modelo Tfidf
 	if typeCont == 'Tfidf':
-		pickle.dump(tfidf, open("../models/tfidf.pkl", "wb"))
+		pickle.dump(vetorizador, open("../models/tfidf.pkl", "wb"))
 
 	#Retorna as matrizes esparsas de treino e teste
-	return bow_train
+	return bow_train, vetorizador
 
 def vectTest(dfTest, typeCont='count', name_column='text'):
 
