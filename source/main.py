@@ -1,18 +1,40 @@
-import loader as ld
+import pipeline as pp
+import interface as itf
+import warnings
+warnings.filterwarnings('ignore')
 
 if __name__ == '__main__':
 
- 	#Teste Carregamento dos Arquivos
-	#path = '../corpus_teste'
-	#texto = ld.loadFiles(path, -1, True)
-	#print(texto)
+	while True:
+		resposta = itf.menu(['Fazer predição com o modelo já treinado', 'Treinar novamente o modelo', 'Treinar o modelo com execução de testes', 'Sair'])
+		if resposta == 1:
 
-	#Teste Carregamento dos dados de Treino
-	dfTreino, dfTeste = ld.loadTrain()
-	print(dfTreino.head())
-	print(dfTeste.head())
+			print('Aguarde...')
+			ret = pp.predictSaveModel()
+			if ret is not None:
+				print("\nResultados da Predição :")
+				print(ret)
 
-	#Teste Carregamento dos dados Para Predição
-	#dfPred = ld.loadPredict()
-	#print(dfPred.head())
-	
+		elif resposta == 2:
+
+			print('Aguarde...')
+			ret = pp.train()
+			print(ret)
+
+		elif resposta == 3:
+
+			print('Aguarde...')
+			ret = pp.trainAndTest()
+			print("\nModelo Treinado.")
+			print("Score dos Testes Realizados:")
+			print(ret)
+
+		elif resposta == 4:
+
+			print('Encerrando')
+			break
+
+		else:
+
+			print('Digite uma opção válida')
+
