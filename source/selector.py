@@ -6,23 +6,13 @@ def CompareModels(Xtrain, ytrain, Xtest, ytest, models_list, models_name):
 	score_names = ['Acurácia', 'Sensibilidade (recall)', 'Precisão', 'Especificidade (bac)', 'F1-score']
 	results = {}
 
-
 	for i in range(len(models_list)):
 
 		print("Modelo:", models_name[i], flush=True)
 		model = models_list[i]
 
-		if models_name[i] == 'GaussianNB':
-			X_trainTransf = Xtrain.copy()
-			X_testTransf = Xtest.copy()
-			X_trainTransf = X_trainTransf.todense()
-			X_testTransf = X_testTransf.todense()
-		else:
-			X_trainTransf = Xtrain
-			X_testTransf = Xtest
-
-		model.fit(X_trainTransf, ytrain)
-		predicted = model.predict(X_testTransf)
+		model.fit(Xtrain, ytrain)
+		predicted = model.predict(Xtest)
 
 		acc = accuracy_score(ytest, predicted)
 		sen = recall_score(ytest, predicted)
