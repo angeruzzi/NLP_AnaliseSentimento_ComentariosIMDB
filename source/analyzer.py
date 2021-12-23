@@ -9,6 +9,10 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
+
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import SGDClassifier
+
 import selector as sc
 import loader as ld
 import cleaner as cl
@@ -30,21 +34,24 @@ if __name__ == '__main__':
 
 
 	models_list = [
-	 LogisticRegression(max_iter = 10000),
-	 SVC(max_iter = 10000),
-	 MultinomialNB(),
-	 DecisionTreeClassifier(),
-	 RandomForestClassifier()
+		LogisticRegression(max_iter = 10000),
+		SVC(max_iter = 10000),
+		LinearSVC(),
+		SGDClassifier(),	 
+		MultinomialNB(),
+		DecisionTreeClassifier(),
+		RandomForestClassifier()
 	]
 
 	models_name = [
 		'LogisticRegression',
 		'SVC',
+		'LinearSVC',
+		'SGDClassifier',		
 		'MultinomialNB',
 		'DecisionTreeClassifier',
 		'RandomForestClassifier'		
 	]
-
 
 	#Tratamento 1: 
 	#Tratamento Morfologia = 'stemmer'
