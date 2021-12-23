@@ -1,0 +1,195 @@
+Inicio execução: 2021-12-23 12:48:42.512890
+
+Instanciando modelos
+
+Tratamento de Dados de Treino 1:
+Loaded
+Cleaned
+
+Dados de Teste:
+Loaded
+Cleaned
+
+ Avaliação 1
+Vectorized
+Count Columns:  51229
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.85392                 0.84440  0.860789               0.85392  0.852516
+SVC                      0.86948                 0.88448  0.858718               0.86948  0.871409
+LinearSVC                0.82852                 0.81416  0.838234               0.82852  0.826022
+SGDClassifier            0.83716                 0.87800  0.811700               0.83716  0.843549
+MultinomialNB            0.81768                 0.76232  0.857233               0.81768  0.806995
+DecisionTreeClassifier   0.72176                 0.72096  0.722115               0.72176  0.721537
+RandomForestClassifier   0.84944                 0.84528  0.852372               0.84944  0.848811
+Fim execução 1 : 2021-12-23 13:01:59.979228
+
+ Avaliação 2
+Vectorized
+Count Columns:  1577483
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.87412                 0.87232  0.875472               0.87412  0.873893
+SVC                      0.87064                 0.87616  0.866593               0.87064  0.871350
+LinearSVC                0.86864                 0.86104  0.874330               0.86864  0.867634
+SGDClassifier            0.86268                 0.84280  0.877697               0.86268  0.859895
+MultinomialNB            0.82276                 0.79520  0.841588               0.82276  0.817737
+DecisionTreeClassifier   0.74068                 0.74104  0.740507               0.74068  0.740773
+RandomForestClassifier   0.84224                 0.87944  0.818541               0.84224  0.847898
+Fim execução 2 : 2021-12-23 13:29:01.949758
+
+ Avaliação 3
+Vectorized
+Count Columns:  51229
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.88000                 0.88024  0.879818               0.88000  0.880029
+SVC                      0.87872                 0.87256  0.883444               0.87872  0.877968
+LinearSVC                0.86460                 0.85272  0.873474               0.86460  0.862972
+SGDClassifier            0.87780                 0.87504  0.879897               0.87780  0.877462
+MultinomialNB            0.82196                 0.77488  0.855427               0.82196  0.813164
+DecisionTreeClassifier   0.70992                 0.70576  0.711681               0.70992  0.708708
+RandomForestClassifier   0.84688                 0.83568  0.854828               0.84688  0.845146
+Fim execução 3: 2021-12-23 13:40:14.905543
+
+ Avaliação 4
+Vectorized
+Count Columns:  1577483
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.87860                 0.88480  0.873963               0.87860  0.879348
+SVC                      0.88544                 0.89048  0.881594               0.88544  0.886014
+LinearSVC                0.88904                 0.88736  0.890352               0.88904  0.888853
+SGDClassifier            0.88552                 0.89736  0.876602               0.88552  0.886860
+MultinomialNB            0.85812                 0.82968  0.879718               0.85812  0.853967
+DecisionTreeClassifier   0.71176                 0.70432  0.714959               0.71176  0.709599
+RandomForestClassifier   0.85044                 0.83680  0.860268               0.85044  0.848372
+Fim execução 4: 2021-12-23 14:09:58.251602
+
+Tratamento de Dados de Treino 2:
+Loaded
+Cleaned
+
+Dados de Teste:
+Loaded
+Cleaned
+
+ Avaliação 5
+Vectorized
+Count Columns:  67089
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.85980                 0.85008  0.866933               0.85980  0.858424
+SVC                      0.87016                 0.88560  0.859072               0.87016  0.872134
+LinearSVC                0.83732                 0.82728  0.844232               0.83732  0.835670
+SGDClassifier            0.84640                 0.83496  0.854511               0.84640  0.844622
+MultinomialNB            0.82196                 0.76608  0.862470               0.82196  0.811422
+DecisionTreeClassifier   0.72104                 0.71352  0.724415               0.72104  0.718926
+RandomForestClassifier   0.85184                 0.84608  0.855940               0.85184  0.850982
+Fim execução 5 : 2021-12-23 14:24:35.100163
+
+ Avaliação 6
+Vectorized
+Count Columns:  1737147
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.87592                 0.87568  0.876101               0.87592  0.875890
+SVC                      0.87096                 0.87760  0.866098               0.87096  0.871811
+LinearSVC                0.87140                 0.86448  0.876612               0.87140  0.870504
+SGDClassifier            0.86432                 0.84968  0.875309               0.86432  0.862304
+MultinomialNB            0.82676                 0.79712  0.847351               0.82676  0.821468
+DecisionTreeClassifier   0.73480                 0.72384  0.740062               0.73480  0.731861
+RandomForestClassifier   0.84752                 0.87136  0.831704               0.84752  0.851070
+Fim execução 6 : 2021-12-23 14:55:08.989719
+
+ Avaliação 7
+Vectorized
+Count Columns:  67089
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.87964                 0.87960  0.879670               0.87964  0.879635
+SVC                      0.88004                 0.87456  0.884251               0.88004  0.879379
+LinearSVC                0.86620                 0.85264  0.876408               0.86620  0.864361
+SGDClassifier            0.87872                 0.87512  0.881467               0.87872  0.878282
+MultinomialNB            0.83116                 0.78448  0.865261               0.83116  0.822893
+DecisionTreeClassifier   0.71468                 0.71224  0.715733               0.71468  0.713982
+RandomForestClassifier   0.84956                 0.83768  0.858068               0.84956  0.847751
+Fim execução 7: 2021-12-23 15:08:00.687532
+
+ Avaliação 8
+Vectorized
+Count Columns:  1737147
+
+ Starting model comparison
+Modelo: LogisticRegression
+Modelo: SVC
+Modelo: LinearSVC
+Modelo: SGDClassifier
+Modelo: MultinomialNB
+Modelo: DecisionTreeClassifier
+Modelo: RandomForestClassifier
+                        Acurácia  Sensibilidade (recall)  Precisão  Especificidade (bac)  F1-score
+LogisticRegression       0.87884                 0.88456  0.874555               0.87884  0.879529
+SVC                      0.88516                 0.89240  0.879662               0.88516  0.885985
+LinearSVC                0.88988                 0.88920  0.890411               0.88988  0.889805
+SGDClassifier            0.88552                 0.89472  0.878555               0.88552  0.886564
+MultinomialNB            0.86128                 0.83256  0.883297               0.86128  0.857178
+DecisionTreeClassifier   0.70028                 0.70144  0.699816               0.70028  0.700627
+RandomForestClassifier   0.84856                 0.82512  0.865704               0.84856  0.844925
+Fim execução 8: 2021-12-23 15:39:21.786885

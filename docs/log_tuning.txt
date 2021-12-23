@@ -1,0 +1,11 @@
+Inicio execução Tuning: 2021-12-23 17:00:08.497873
+
+Tratamento de Dados de Treino:
+Loaded
+Cleaned
+Vectorized
+Count Columns:  1737147
+
+ Starting model tuning
+{'C': 1.5671297731744318, 'penalty': 'l2'}
+Fim execução Tuning: 2021-12-23 17:03:18.295579
