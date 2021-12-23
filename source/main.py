@@ -27,7 +27,7 @@ if __name__ == '__main__':
 			print('\nAguarde...', flush=True)
 			ret = pp.trainAndTest()
 
-			print("\nScore dos Testes Realizados:")
+			print("\nScore médio dos Testes Realizados:")
 			print(ret)
 
 		elif resposta == 4:
