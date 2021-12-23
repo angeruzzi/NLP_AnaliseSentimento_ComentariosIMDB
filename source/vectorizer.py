@@ -5,13 +5,13 @@ from pathlib import Path
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-def vectTrain(dfTrain, typeCont='count', name_column='text'):
+def vectTrain(dfTrain, typeCont='count', nGram = (1,1), name_column='text'):
 
 	#Cria o objeto de vetorização
 	if typeCont == 'count':
-		vetorizador = CountVectorizer(lowercase=False)
+		vetorizador = CountVectorizer(lowercase=False, ngram_range = nGram)
 	else: #Tfidf
-		vetorizador = TfidfVectorizer(lowercase=False)
+		vetorizador = TfidfVectorizer(lowercase=False, ngram_range = nGram)
 
 	#Vetoriza os dados de Treino e treina o vetorizador
 	bow_train 	= vetorizador.fit_transform(dfTrain[name_column])
