@@ -1,8 +1,10 @@
 ## 📽️ NLP - Análise de Sentimento de Comentarios de Filmes do IMDB
 
 Este projeto consiste na implementação de um modelo de predição baseado em Análise de Sentimento, que possa avaliar comentários em inglês de filmes e classificá-los como negativos ou positivos.
-Maiores informações acerca do projeto podem ser obtidas no relatório do diretório "docs" deste repositório.
 
+Acesse o [relatório do projeto](  https://github.com/angeruzzi/NLP_AnaliseSentimento_ComentariosIMDB/blob/5dfb86c064fd80bfcdf734fa6bbb838570275d55/docs/relatorio_NLP_AnaliseSentimento_ComentariosIMDB.pdf )
+para maiores informações.
+ 
 ### 📋 Pré-requisitos
 
 Para execução do projeto é necessário que tenha o instalado em seu computador:
